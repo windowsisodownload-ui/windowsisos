@@ -1,0 +1,79 @@
+/* Fix for stats alignment - ensuring text stays on same line and is not truncated - Dark Mode Compatible */
+
+/* Override any existing overflow settings */
+.quick-stats .stat-number,
+.quick-stats .stat-label {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+}
+
+/* Desktop and tablet */
+.quick-stats .col-6 {
+    padding: 0 0.5rem;
+    min-width: 0;
+}
+
+.stat-number {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-width: 100%;
+    word-break: keep-all !important;
+    color: #4a90e2 !important;
+}
+
+.stat-label {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-width: 100%;
+    word-break: keep-all !important;
+    color: #b0b0b0 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .quick-stats .col-6 {
+        padding: 0 0.25rem;
+    }
+    
+    .stat-number {
+        font-size: 1rem;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        color: #4a90e2 !important;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        color: #b0b0b0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-stats .col-6 {
+        padding: 0 0.15rem;
+    }
+    
+    .stat-number {
+        font-size: 0.85rem;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        color: #4a90e2 !important;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        color: #b0b0b0 !important;
+    }
+} 

@@ -1,0 +1,217 @@
+/* Software Card Styles - Dark Mode */
+.software-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: #4a90e2;
+}
+
+/* Clickable card styles */
+.clickable-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: #4a90e2;
+}
+
+.clickable-card:active {
+    transform: translateY(-2px);
+    transition: transform 0.1s ease;
+}
+
+.software-card img {
+    border-radius: 12px 12px 0 0;
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.software-card .card-body {
+    padding: 0.5rem;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.software-card .card-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    color: #e0e0e0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Badge Container and Rows */
+.badges-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.badge-row {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: flex-end;
+}
+
+/* Version Badge */
+.badge-version {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+    background: #007bff !important;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+/* Architecture Badge */
+.badge-architecture {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+    background: #17a2b8 !important;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+/* Edition Badge */
+.badge-edition {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+}
+
+/* License Badge */
+.badge-license {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+    background: #2a2a2a;
+    color: #b0b0b0;
+    border: 1px solid #444;
+    align-self: flex-end;
+}
+
+/* Top Download Item Styles */
+.top-download-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.top-download-item:hover {
+    transform: translateX(5px);
+    border-color: #4a90e2;
+}
+
+.top-download-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.top-download-item .title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #e0e0e0;
+}
+
+.top-download-item .downloads {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+}
+
+/* Grid View Styles */
+.grid-view .software-card {
+    margin-bottom: 1rem;
+}
+
+/* List View Styles */
+.list-view .software-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.list-view .software-card img {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px 0 0 8px;
+}
+
+.list-view .software-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-view .software-card .card-title {
+    font-size: 1rem;
+}
+
+/* Sidebar Category Links */
+.sidebar-category-link {
+    text-decoration: none;
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+}
+
+.sidebar-category-link:hover {
+    color: #4a90e2;
+}
+
+/* Loading States */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-top: 3px solid #4a90e2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #b0b0b0;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+} 

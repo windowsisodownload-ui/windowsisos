@@ -1,0 +1,739 @@
+/* Software Detail Page Styles - Dark Mode */
+
+/* Software Header */
+.software-header {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.software-image-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.software-main-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.software-badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.software-badges .badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    background: #2a2a2a;
+    color: #b0b0b0;
+    border: 1px solid #444;
+}
+
+.software-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.software-description {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Quick Stats */
+.quick-stats {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quick-stats .row {
+    margin: 0;
+}
+
+.quick-stats .col-6 {
+    padding: 0 0.25rem;
+    min-width: 0;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 0;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4a90e2;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.action-buttons .btn {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Download button below cover image */
+.software-image-container + .quick-stats + .action-buttons .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    color: #e0e0e0;
+}
+
+.software-image-container + .quick-stats + .action-buttons .btn:hover {
+    background: linear-gradient(135deg, #357abd 0%, #6a5acd 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Download Providers List */
+.download-providers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.download-provider-list-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-provider-list-item:hover {
+    border-color: #4a90e2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.download-provider-list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.download-provider-list-item:hover::before {
+    transform: scaleX(1);
+}
+
+.download-provider-list-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.download-provider-list-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.download-provider-list-icon.mediafire {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+.download-provider-list-icon.googledrive {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+.download-provider-list-icon.dropbox {
+    background: linear-gradient(135deg, #0061ff 0%, #00a3ff 100%);
+}
+
+.download-provider-list-icon.mega {
+    background: linear-gradient(135deg, #d9272e 0%, #ff6b6b 100%);
+}
+
+.download-provider-list-icon.github {
+    background: linear-gradient(135deg, #333 0%, #666 100%);
+}
+
+.download-provider-list-icon.official {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.download-provider-list-icon.steam {
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+}
+
+.download-provider-list-icon.adobe {
+    background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%);
+}
+
+.download-provider-list-icon.microsoft {
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+}
+
+.download-provider-list-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.download-provider-list-name {
+    margin: 0;
+    font-weight: 600;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.download-provider-list-description {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    line-height: 1.3;
+}
+
+.download-provider-list-action {
+    flex-shrink: 0;
+}
+
+.download-provider-list-button {
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+}
+
+.download-provider-list-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.download-provider-list-button:active {
+    transform: translateY(0);
+}
+
+/* Provider-specific button colors */
+.download-provider-list-button.mediafire {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+.download-provider-list-button.googledrive {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+.download-provider-list-button.dropbox {
+    background: linear-gradient(135deg, #0061ff 0%, #00a3ff 100%);
+}
+
+.download-provider-list-button.mega {
+    background: linear-gradient(135deg, #d9272e 0%, #ff6b6b 100%);
+}
+
+.download-provider-list-button.github {
+    background: linear-gradient(135deg, #333 0%, #666 100%);
+}
+
+.download-provider-list-button.official {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.download-provider-list-button.steam {
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+}
+
+.download-provider-list-button.adobe {
+    background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%);
+}
+
+.download-provider-list-button.microsoft {
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+}
+
+/* Installation Section */
+.installation-section {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.installation-content {
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+/* Tab Styling */
+.nav-tabs {
+    border-bottom: 1px solid #333;
+    margin-bottom: 1.5rem;
+}
+
+.nav-tabs .nav-link {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-bottom: none;
+    color: #b0b0b0;
+    border-radius: 8px 8px 0 0;
+    padding: 0.75rem 1.5rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #4a90e2;
+}
+
+.nav-tabs .nav-link.active {
+    background: #4a90e2;
+    color: #e0e0e0;
+    border-color: #4a90e2;
+}
+
+.tab-content {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.tab-pane {
+    padding: 1.5rem;
+}
+
+/* Screenshots Gallery */
+.screenshots-content {
+    min-height: 200px;
+}
+
+.screenshots-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.screenshot-item {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #4a90e2;
+}
+
+.screenshot-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover .screenshot-image {
+    transform: scale(1.05);
+}
+
+.screenshot-caption {
+    padding: 1rem;
+    background: #2a2a2a;
+}
+
+.screenshot-title {
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.screenshot-description {
+    color: #b0b0b0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Screenshot Modal */
+.screenshot-modal .modal-content {
+    background: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.screenshot-modal .modal-header {
+    border-bottom: 1px solid #333;
+    background: #2a2a2a;
+}
+
+.screenshot-modal .modal-body {
+    padding: 0;
+    text-align: center;
+}
+
+.screenshot-modal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.screenshot-modal .modal-footer {
+    border-top: 1px solid #333;
+    background: #2a2a2a;
+}
+
+/* No Screenshots State */
+.no-screenshots {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #b0b0b0;
+}
+
+.no-screenshots i {
+    font-size: 3rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.no-screenshots h5 {
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+
+.no-screenshots p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+/* Sidebar Styles */
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.info-value {
+    color: #b0b0b0;
+}
+
+/* Related Software */
+.related-software-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    background: #1a1a1a;
+}
+
+.related-software-item:hover {
+    background: #2a2a2a;
+}
+
+.related-software-item:last-child {
+    border-bottom: none;
+}
+
+.related-software-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.related-software-info h6 {
+    margin: 0 0 0.25rem 0;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.related-software-info p {
+    margin: 0;
+    color: #b0b0b0;
+    font-size: 0.8rem;
+}
+
+/* Stats Items */
+.stats-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.stats-item:last-child {
+    border-bottom: none;
+}
+
+.stats-label {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.stats-value {
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .software-title {
+        font-size: 2rem;
+    }
+    
+    .software-description {
+        font-size: 1rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Download button below cover image - mobile */
+    .software-image-container + .quick-stats + .action-buttons .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
+    }
+    
+    /* Stats responsive adjustments */
+    .stat-number {
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .screenshots-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .software-header {
+        padding: 1.5rem;
+    }
+    
+    .software-main-image {
+        height: 200px;
+    }
+    
+    .download-providers {
+        gap: 0.5rem;
+    }
+    
+    #downloadModal .modal-body {
+        padding: 1rem;
+    }
+    
+    .download-provider-list-item {
+        padding: 0.75rem;
+    }
+    
+    .download-provider-list-content {
+        gap: 0.75rem;
+    }
+    
+    .download-provider-list-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .download-provider-list-name {
+        font-size: 0.9rem;
+    }
+    
+    .download-provider-list-description {
+        font-size: 0.8rem;
+    }
+    
+    .download-provider-list-button {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .quick-stats .col-6 {
+        padding: 0 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .software-title {
+        font-size: 1.5rem;
+    }
+    
+    .quick-stats .row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Ensure stats stay on same line even on very small screens */
+    .stat-number {
+        font-size: 0.9rem;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem;
+    }
+    
+    .download-provider-list-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .download-provider-list-icon {
+        margin: 0 auto;
+    }
+    
+    .download-provider-list-action {
+        width: 100%;
+    }
+    
+    .download-provider-list-button {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .software-info {
+        padding: 1rem;
+    }
+    
+    #downloadModal .modal-header,
+    #downloadModal .modal-footer {
+        padding: 1rem;
+    }
+}
+
+/* Additional fixes for stats alignment */
+@media (max-width: 768px) {
+    .quick-stats .col-6 {
+        padding: 0 0.25rem;
+    }
+    
+    .stat-number {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .stat-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-stats .col-6 {
+        padding: 0 0.15rem;
+    }
+    
+    .stat-number {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+} 

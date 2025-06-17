@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://username.github.io/windows-iso-download/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /windows-*-iso-download
+Allow: /how-to-download-windows-iso
+Allow: /create-bootable-usb-windows
+Allow: /windows-system-requirements 
